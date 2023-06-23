@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-height: 100vh; */
+}
+
+.container {
+  border: 1px solid #deb887;
+  display: flex;
+  flex-direction: column;
+  width: min(97vw, 700px);
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.container h1 {
+  margin: 10px 0 17px;
+}
+
+#chess-board {
+  background-color: #deb887;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin: 10px 0 17px;
+}
+
+#chess-board button[type="button"] {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  width: 100%;
+  height: 70px;
+}
+
+#chess-board button[type="button"].dark {
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+}
+
+#chess-board button[type="button"].queen_1::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background-color: #a52a2a;
+}
+
+#chess-board button[type="button"].queen_2 {
+  background-color: #ffd700;
+}
+
+p {
+  width: 100%;
+  word-wrap: normal;
+  height: 30px;
+  color: #f00;
+}
+
+main .cta {
+  margin: 10px 0 17px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+main .cta button {
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+main .cta button:nth-child(2n) {
+  background-color: #a52a2a;
+  border: 1px solid #a52a2a;
+  color: #ddd;
+}
+
+@media only screen and (max-width: 768px) {
+  #chess-board button[type="button"] {
+    height: min(70px, 7vh, 3rem);
+  }
+}
