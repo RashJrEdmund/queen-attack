@@ -47,17 +47,29 @@ body {
   background-color: #000;
 }
 
-#chess-board button[type="button"].queen_1::before {
-  content: " ";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 2;
+#chess-board button[type="button"].queen_1::before,
+#chess-board button[type="button"].queen_2::before {
   background-color: #a52a2a;
+  content: "Queen";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  font-weight: 600;
 }
 
-#chess-board button[type="button"].queen_2 {
-  background-color: #ffd700;
+#chess-board button[type="button"].queen_2::before {
+  content: "Queen";
+  background-color: #008000;
 }
 
 p {
@@ -74,13 +86,13 @@ main .cta {
   gap: 20px;
 }
 
-main .cta button {
+main .cta input {
   padding: 10px;
   font-weight: 500;
   cursor: pointer;
 }
 
-main .cta button:nth-child(2n) {
+main .cta input:nth-child(2n) {
   background-color: #a52a2a;
   border: 1px solid #a52a2a;
   color: #ddd;
