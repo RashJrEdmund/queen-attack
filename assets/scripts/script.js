@@ -15,9 +15,10 @@ squares.forEach((square) =>
   square.addEventListener("click", ({ target }) => {
     const { id } = target;
     errorSuccessTag.innerHTML = "";
+    errorSuccessTag.classList.remove("success");
 
     if (choosenQueens.length >= 2)
-      return (errorSuccessTag.innerHTML = "cannot select more than 1 queens");
+      return (errorSuccessTag.innerHTML = "cannot select more than 1 queen");
 
     if (choosenQueens.length < 1) {
       // means this is our firts queen
@@ -27,7 +28,6 @@ squares.forEach((square) =>
     }
 
     choosenQueens.push(id);
-    console.log("choosenQueens", choosenQueens);
   })
 );
 
@@ -44,9 +44,12 @@ const resetGame = () => {
 resetBtn.addEventListener("click", resetGame);
 
 checkAttackBtn.addEventListener("click", () => {
-  const attack = isStrikeable();
-  if (attack) {
+  const attackObj = isStrikeable(choosenQueens, errorSuccessTag);
+  if (attackObj.isValid) {
     errorSuccessTag.classList.add("success");
-    errorSuccessTag.innerHTML = "queen 1 can attack queen 2";
+    errorSuccessTag.innerHTML = attackObj.message;
+    return;
   }
+
+  errorSuccessTag.innerHTML = attackObj.message;
 });

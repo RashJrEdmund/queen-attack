@@ -46,7 +46,7 @@ export const isStrikeable = (choosenQueens, errorSuccessTag) => {
 
   const postitiveObj = {
     isValid: true,
-    message: "You have to pick any two queens from the board",
+    message: "queen 1 can take down queen 2",
   };
 
   // horizontal check
@@ -71,5 +71,9 @@ export const isStrikeable = (choosenQueens, errorSuccessTag) => {
   if (moduleRightLeft) {
     return postitiveObj;
   }
-  alerts.textContent = "A Queen cannot be attacked!";
+
+  return {
+    isValid: false,
+    message: "Missed, can not attack this queen",
+  };
 };

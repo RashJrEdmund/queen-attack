@@ -79,6 +79,10 @@ p {
   color: #f00;
 }
 
+p.success {
+  color: #4682b4;
+}
+
 main .cta {
   margin: 10px 0 17px;
   display: flex;
