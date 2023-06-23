@@ -31,7 +31,7 @@ This page is basically built with just
 
 ## CONTRIBUTION
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](`https://github.com/RashJrEdmund/queen-attack/issues8`).
+Feel free to check the [issues page](`https://github.com/RashJrEdmund/queen-attack/issues`).
 
 ## Live Site
 
