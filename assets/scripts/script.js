@@ -21,9 +21,9 @@ squares.forEach((square) =>
 
     if (choosenQueens.length < 1) {
       // means this is our firts queen
-      target.classList.add('queen_1')
+      target.classList.add('queen-1')
     } else {
-      target.classList.add('queen_2')
+      target.classList.add('queen-2')
     }
 
     choosenQueens.push(id)
@@ -32,8 +32,8 @@ squares.forEach((square) =>
 
 const resetGame = () => {
   choosenQueens.forEach((id) => {
-    document.getElementById(id).classList.remove('queen_1')
-    document.getElementById(id).classList.remove('queen_2')
+    document.getElementById(id).classList.remove('queen-1')
+    document.getElementById(id).classList.remove('queen-2')
   })
 
   errorSuccessTag.innerHTML = ''

@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* min-height: 100vh; */
+  min-height: 100vh;
 }
 
 .container {
@@ -47,8 +47,8 @@ body {
   background-color: #000;
 }
 
-#chess-board button[type="button"].queen_1::before,
-#chess-board button[type="button"].queen_2::before {
+#chess-board button[type="button"].queen-1::before,
+#chess-board button[type="button"].queen-2::before {
   background-color: #a52a2a;
   content: "Queen";
   position: absolute;
@@ -67,7 +67,7 @@ body {
   font-weight: 600;
 }
 
-#chess-board button[type="button"].queen_2::before {
+#chess-board button[type="button"].queen-2::before {
   content: "Queen";
   background-color: #008000;
 }
